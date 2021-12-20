@@ -108,7 +108,7 @@ def regex_validate(type, test_string):
         "Email": re.compile(r"^\w{3,7}@\w{3,10}.\w{1,5}$"),
         "Pan": re.compile(r"^\w{10}$"),
         "Aadhar": re.compile(r"^\d{12}$"),
-        "Amount": re.compile(r'\d{1,7}')
+        "Amount": re.compile(r"^\d{1,7}$")
     }
     return bool(re.fullmatch(switch[type], test_string))
 
